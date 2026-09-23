@@ -142,3 +142,36 @@ button:disabled {
   color: var(--main);
   border-color: var(--secondary);
 }
+
+.card {
+  margin-bottom: var(--large);
+  padding: var(--large);
+  background: var(--main);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.raised, .notice, .media {
+  margin-top: var(--medium);
+  padding: var(--medium);
+  background: var(--main);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.raised {
+  box-shadow: var(--shadow);
+}
+
+.notice {
+  border-left: 5px solid var(--pop-out-color);
+}
+
+.media {
+  display: flex;
+  min-height: 180px;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondary);
+  border: 2px dashed var(--border);
+}
