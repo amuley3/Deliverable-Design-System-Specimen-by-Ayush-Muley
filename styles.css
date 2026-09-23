@@ -9,3 +9,29 @@ body, h1, h2, h3, p {
 button, input, select {
   font: inherit;
 }
+
+:root {
+  --font-body: Georgia, "Times New Roman", serif;
+  --font-display: Georgia, "Times New Roman", serif;
+  
+  --font-size-base: 1rem; 
+  --leading-body: 1.6; 
+  --measure: 68ch;
+
+  --background: #f5f1e8;
+  --main: #fffdf8;
+  --text: #24231f;
+  --secondary: #666;
+  --border: #ccc;
+  --pop-out-color: #315c52;
+  --focus: #c77b16;
+
+  --small: 8px;
+  --medium: 16px;
+  --large: 32px;
+
+  --radius: 8px;
+
+  --shadow: 0 4px 12px #0002;
+}
+
