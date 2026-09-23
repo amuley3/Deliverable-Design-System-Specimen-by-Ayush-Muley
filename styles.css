@@ -175,3 +175,35 @@ button:disabled {
   color: var(--secondary);
   border: 2px dashed var(--border);
 }
+
+label {
+  display: block;
+  margin: var(--medium) 0 var(--small);
+  font-weight: bold;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  max-width: 500px;
+  padding: 8px;
+  background: var(--main);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: var(--pop-out-color);
+}
+
+.theme-alt {
+  --background: #18221f;
+  --main: #26312d;
+  --text: #f2f0e8;
+  --secondary: #c5cbc7;
+  --border: #64716b;
+  --pop-out-color: #8bd1c3;
+  --focus: #ffd166;
+}
