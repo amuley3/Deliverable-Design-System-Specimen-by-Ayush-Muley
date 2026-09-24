@@ -15,33 +15,35 @@
 
   <main>
     <article class="card">
+      <p class="label">Featured Story</p>
+      <p class="metadata">Published September 24, 2026 · 5 min read</p>
       <h2>Hello World</h2>
       <p>This is a small publication.</p>
-      <p>New <code>stories</code> are published each week.</p>
+      <p>New <span class="inline-code">stories</span> are published each week.</p>
       <p><a href="#">Read more</a></p>
     </article>
 
-    <article class="card">
+    <article class="card theme-alt">
       <h2>More Notes</h2>
-      <h3>Topics</h3>
+      <p>This card uses the alternate theme.</p>
       <ul>
         <li>News</li>
         <li>Events</li>
         <li>Community</li>
       </ul>
 
-      <article class="raised">
+      <div class="elevated ">
         <h3>Editor's Note</h3>
         <p>Small stories.</p>
-      </article>
+      </div>
 
-      <article class="notice">
+      <div class="notice">
         <p>Coming soon.</p>
-      </article>
+      </div>
 
-      <article class="media">
+      <div class="media">
         <p>Media</p>
-      </article>
+      </div>
     </article>
 
     <article class="card">
@@ -57,8 +59,8 @@
       <label for="name">Name</label>
       <input id="name" type="text">
 
-      <label for="topic">Frequency</label>
-      <select id="topic">
+      <label for="frequency">Frequency</label>
+      <select id="frequency">
         <option>Weekly</option>
         <option>Monthly</option>
       </select>
@@ -68,9 +70,5 @@
       <label><input type="radio" name="format"> Website</label>
     </article>
   </main>
-
-  <footer>
-    <p>Notes</p>
-  </footer>
 </body>
 </html>

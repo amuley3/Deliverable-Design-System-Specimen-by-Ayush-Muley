@@ -18,13 +18,13 @@ button, input, select {
   --leading-body: 1.6; 
   --measure: 68ch;
 
-  --background: #f5f1e8;
-  --main: #fffdf8;
-  --text: #24231f;
-  --secondary: #666;
-  --border: #ccc;
-  --pop-out-color: #315c52;
-  --focus: #c77b16;
+  --color-background: #f5f1e8;
+  --color-main: #fffdf8;
+  --color-text: #24231f;
+  --color-secondary: #666;
+  --color-border: #ccc;
+  --color-pop-out: #315c52;
+  --color-focus: #c77b16;
 
   --small: 8px;
   --medium: 16px;
@@ -36,14 +36,14 @@ button, input, select {
 }
 
 body {
-  background: var(--background);
-  color: var(--text);
+  background: var(--color-background);
+  color: var(--color-text);
   font-family: var(--font-body);
   font-size: var(--font-size-base);
   line-height: var(--leading-body);
 }
 
-header, main, footer {
+header, main {
   width: 90%;
   max-width: 1100px;
   margin: auto;
@@ -51,16 +51,6 @@ header, main, footer {
 
 header {
   padding: 48px 0;
-}
-
-main {
-  display: grid;
-}
-
-
-footer {
-  padding: var(--large) 0;
-  color: var(--secondary);
 }
 
 h1, h2, h3 {
@@ -78,7 +68,7 @@ h2 {
 }
 
 h3 {
-  margin: 20px 0 var(--small);
+  margin: var(--medium) 0 var(--small);
   font-size: 1.4rem;
 }
 
@@ -87,24 +77,44 @@ p {
   margin-bottom: var(--medium);
 }
 
+ul, ol {
+  max-width: var(--measure);
+  margin: 0 0 var(--medium);
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: var(--small);
+}
+
+.inline-code {
+  font-family: monospace;
+  font-size: 0.9em;
+  padding: 2px 4px;
+  background: var(--color-background);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+}
+
 .label {
-  color: var(--pop-out-color);
+  color: var(--color-pop-out);
   font-size: 0.875rem;
   font-weight: bold;
   text-transform: uppercase;
 }
 
 .metadata {
-  color: var(--secondary);
+  color: var(--color-secondary);
   font-size: 0.875rem;
 }
 
 a {
-  color: var(--pop-out-color);
+  color: var(--color-pop-out);
 }
 
 a:hover {
-  color: var(--text);
+  color: var(--color-text);
 }
 
 button {
@@ -114,57 +124,65 @@ button {
   border-radius: var(--radius);
 }
 
-button:focus,
-input:focus,
-select:focus {
-  outline: 3px solid var(--focus);
+button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible {
+  outline: 3px solid var(--color-focus);
   outline-offset: 2px;
 }
 
 .primary {
-  background: var(--pop-out-color);
-  color: #fffdf8;
-  border: 2px solid var(--pop-out-color);
+  background: var(--color-pop-out);
+  color: var(--color-main);
+  border: 2px solid var(--color-pop-out);
 }
 
 .primary:hover {
-  background: var(--text);
+  background: var(--color-text);
+}
+
+.primary:active {
+  background: var(--color-text);
+  color: var(--color-main);
 }
 
 .secondary {
-  background: var(--main);
-  color: var(--pop-out-color);
-  border: 2px solid var(--pop-out-color);
+  background: var(--color-main);
+  color: var(--color-pop-out);
+  border: 2px solid var(--color-pop-out);
+}
+
+.secondary:active {
+  background: var(--color-pop-out);
+  color: var(--color-main);
 }
 
 button:disabled {
-  background: var(--secondary);
-  color: var(--main);
-  border-color: var(--secondary);
+  background: var(--color-secondary);
+  color: var(--color-main);
+  border-color: var(--color-secondary);
 }
 
 .card {
   margin-bottom: var(--large);
   padding: var(--large);
-  background: var(--main);
-  border: 1px solid var(--border);
+  background: var(--color-main);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius);
 }
 
-.raised, .notice, .media {
+.elevated , .notice, .media {
   margin-top: var(--medium);
   padding: var(--medium);
-  background: var(--main);
-  border: 1px solid var(--border);
+  background: var(--color-main);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius);
 }
 
-.raised {
+.elevated{
   box-shadow: var(--shadow);
 }
 
 .notice {
-  border-left: 5px solid var(--pop-out-color);
+  border-left: 5px solid var(--color-pop-out);
 }
 
 .media {
@@ -172,8 +190,8 @@ button:disabled {
   min-height: 180px;
   align-items: center;
   justify-content: center;
-  color: var(--secondary);
-  border: 2px dashed var(--border);
+  color: var(--color-secondary);
+  border: 2px dashed var(--color-border);
 }
 
 label {
@@ -187,23 +205,41 @@ select {
   width: 100%;
   max-width: 500px;
   padding: 8px;
-  background: var(--main);
-  color: var(--text);
-  border: 1px solid var(--border);
+  background: var(--color-main);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius);
 }
 
 input[type="checkbox"],
 input[type="radio"] {
-  accent-color: var(--pop-out-color);
+  accent-color: var(--color-pop-out);
 }
 
 .theme-alt {
-  --background: #18221f;
-  --main: #26312d;
-  --text: #f2f0e8;
-  --secondary: #c5cbc7;
-  --border: #64716b;
-  --pop-out-color: #8bd1c3;
-  --focus: #ffd166;
+  --color-background: #18221f;
+  --color-main: #09704a;
+  --color-text: #f2f0e8;
+  --color-secondary: #c5cbc7;
+  --color-border: #64716b;
+  --color-pop-out: #8bd1c3;
+  --color-focus: #ffd166;
+}
+
+@media (max-width: 600px) {
+  header, main {
+    width: 92%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .card {
+    padding: var(--medium);
+  }
 }
