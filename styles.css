@@ -169,7 +169,7 @@ button:disabled {
   border-radius: var(--radius);
 }
 
-.elevated , .notice, .media {
+.elevation , .notice, .media {
   margin-top: var(--medium);
   padding: var(--medium);
   background: var(--color-main);
@@ -177,7 +177,7 @@ button:disabled {
   border-radius: var(--radius);
 }
 
-.elevated{
+.elevation{
   box-shadow: var(--shadow);
 }
 
