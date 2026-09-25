@@ -26,9 +26,9 @@ button, input, select {
   --color-pop-out: #315c52;
   --color-focus: #c77b16;
 
-  --small: 8px;
-  --medium: 16px;
-  --large: 32px;
+  --small-spacing: 8px;
+  --medium-spacing: 16px;
+  --large-spacing: 32px;
 
   --radius: 8px;
 
@@ -63,28 +63,28 @@ h1 {
 }
 
 h2 {
-  margin-bottom: var(--medium);
+  margin-bottom: var(--medium-spacing);
   font-size: 2rem;
 }
 
 h3 {
-  margin: var(--medium) 0 var(--small);
+  margin: var(--medium-spacing) 0 var(--small-spacing);
   font-size: 1.4rem;
 }
 
 p {
   max-width: var(--measure);
-  margin-bottom: var(--medium);
+  margin-bottom: var(--medium-spacing);
 }
 
 ul, ol {
   max-width: var(--measure);
-  margin: 0 0 var(--medium);
+  margin: 0 0 var(--medium-spacing);
   padding-left: 1.5rem;
 }
 
 li {
-  margin-bottom: var(--small);
+  margin-bottom: var(--small-spacing);
 }
 
 .inline-code {
@@ -162,16 +162,16 @@ button:disabled {
 }
 
 .card {
-  margin-bottom: var(--large);
-  padding: var(--large);
+  margin-bottom: var(--large-spacing);
+  padding: var(--large-spacing);
   background: var(--color-main);
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
 }
 
 .elevation , .notice, .media {
-  margin-top: var(--medium);
-  padding: var(--medium);
+  margin-top: var(--medium-spacing);
+  padding: var(--medium-spacing);
   background: var(--color-main);
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
@@ -196,7 +196,7 @@ button:disabled {
 
 label {
   display: block;
-  margin: var(--medium) 0 var(--small);
+  margin: var(--medium-spacing) 0 var(--small-spacing);
   font-weight: bold;
 }
 
@@ -240,6 +240,6 @@ input[type="radio"] {
   }
 
   .card {
-    padding: var(--medium);
+    padding: var(--medium-spacing);
   }
 }
