@@ -104,11 +104,6 @@ li {
   text-transform: uppercase;
 }
 
-.metadata {
-  color: var(--color-secondary);
-  font-size: 0.875rem;
-}
-
 a {
   color: var(--color-pop-out);
 }
@@ -151,6 +146,11 @@ button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible
 }
 
 .secondary:active {
+  background: var(--color-pop-out);
+  color: var(--color-main);
+}
+
+.secondary:hover {
   background: var(--color-pop-out);
   color: var(--color-main);
 }
